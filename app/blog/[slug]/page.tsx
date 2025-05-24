@@ -6,7 +6,9 @@ interface BlogDetailsProps {
 }
 
 export default async function BlogDetails({params} : BlogDetailsProps){
-  const blogSlug = (await params).slug;
+
+  const {slug: blogSlug} = await params;
+
   return (
     <div className="flex justify-center items-center h-96">
       <div>
@@ -15,8 +17,6 @@ export default async function BlogDetails({params} : BlogDetailsProps){
           {blogSlug}
         </code>
       </div>
-
-      
     </div>
     
   );

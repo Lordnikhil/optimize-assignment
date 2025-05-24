@@ -1,6 +1,25 @@
 import Image from "next/image";
 
+const IMAGES_LIST = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
 export default function Gallery() {
+  
+  const renderImages = IMAGES_LIST.map((num) => (
+    <div
+      key={num}
+      className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+    >
+      <Image
+        src={`/${num}.png`}
+        alt={`image_${num}`}
+        className="object-cover hover:scale-105 transition-transform duration-300"
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        loading="lazy"
+        fill
+      />
+    </div>
+  ))
+
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
@@ -8,21 +27,7 @@ export default function Gallery() {
           Gallery
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((num) => (
-            <div
-              key={num}
-              className="relative aspect-square overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-            >
-              <Image
-                src={`/${num}.png`}
-                alt={`image_${num}`}
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                loading="lazy"
-                fill
-              />
-            </div>
-          ))}
+          {renderImages}
         </div>
       </div>
     </section>

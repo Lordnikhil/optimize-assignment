@@ -88,6 +88,35 @@ export default function Gallery() {
     );
   }
 
+  const renderPhotos = photos.map((photo, index) => {
+
+    const eagerlyLoadFirst6Photos = index > 6 ? "lazy" : "eager"
+    
+    return (
+      <div
+        key={photo.id}
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105"
+      >
+        <div className="relative aspect-square">
+          <Image
+            alt={"gallery-img"+index}
+            src={photo.image}
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill
+            loading={eagerlyLoadFirst6Photos}
+          />
+        </div>
+        <div className="p-6">
+          <h3 className="text-xl font-semibold mb-2">{photo.title}</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            {photo.description}
+          </p>
+        </div>
+      </div>
+    )
+  })
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12">
       <div className="container mx-auto px-4">
@@ -97,29 +126,7 @@ export default function Gallery() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {photos.map((photo, index) => (
-            <div
-              key={photo.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105"
-            >
-              <div className="relative aspect-square">
-                <Image
-                  alt={"gallery-img"+index}
-                  src={photo.image}
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  fill
-                  loading={index > 6 ? "lazy" : "eager"}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{photo.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {photo.description}
-                </p>
-              </div>
-            </div>
-          ))}
+          {renderPhotos}
         </div>
       </div>
     </div>
