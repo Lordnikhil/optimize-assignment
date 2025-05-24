@@ -1,126 +1,367 @@
+import { 
+  Dancing_Script, 
+  Anton, 
+  Bebas_Neue, 
+  Charm, 
+  Cinzel, 
+  Comfortaa, 
+  Courgette, 
+  Crimson_Text, 
+  Dosis, 
+  Great_Vibes, 
+  Indie_Flower,
+  Josefin_Sans,
+  Kalam,
+  Lato,
+  Libre_Baskerville,
+  Lobster,
+  Montserrat,
+  Open_Sans,
+  Oswald,
+  Pacifico,
+  Playfair_Display,
+  Poppins,
+  Quicksand,
+  Raleway,
+  Roboto,
+  Roboto_Condensed,
+  Roboto_Mono,
+  Roboto_Slab,
+  Rubik,
+  Source_Sans_3,
+  Source_Serif_4,
+  Space_Grotesk,
+  Space_Mono,
+  Ubuntu,
+  Work_Sans
+} from 'next/font/google';
+
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+});
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: "400"
+});
+
+const bebasNeu = Bebas_Neue({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const charm = Charm({
+  weight: ["400", "700"],
+  subsets: ['latin'],
+});
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+});
+
+const comfortaa = Comfortaa({
+  subsets: ['latin'],
+});
+
+const courgette = Courgette({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const crimsonText = Crimson_Text({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const dosis = Dosis({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const indieFlower = Indie_Flower({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const josefinSans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const kalam = Kalam({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const lobster = Lobster({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const pacifico = Pacifico({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const sourceSans3 = Source_Sans_3({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const sourceSerifPro = Source_Serif_4({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+const workSans = Work_Sans({
+  subsets: ['latin'],
+  weight: "400",
+});
+
+
+
 const fonts = [
   {
     name: "Dancing Script",
     text: "AI Art Generator",
-    className: "font-['Dancing_Script']",
+    // className: "font-['Dancing_Script']",
+    className: dancingScript.className,
   },
-  { name: "Anton", text: "AI Art Generator", className: "font-['Anton']" },
+  { 
+    name: "Anton", text: "AI Art Generator", 
+    // className: "font-['Anton']",
+    className: anton.className
+  },
   {
     name: "Bebas Neue",
     text: "AI Art Generator",
-    className: "font-['Bebas_Neue']",
+    className: bebasNeu.className,
   },
-  { name: "Charm", text: "AI Art Generator", className: "font-['Charm']" },
-  { name: "Cinzel", text: "AI Art Generator", className: "font-['Cinzel']" },
+  { name: "Charm", text: "AI Art Generator", 
+    className: charm.className, 
+  },
+  { name: "Cinzel", text: "AI Art Generator", 
+    className: cinzel.className,
+  },
   {
     name: "Comfortaa",
     text: "AI Art Generator",
-    className: "font-['Comfortaa']",
+    className: comfortaa.className,
   },
   {
     name: "Courgette",
     text: "AI Art Generator",
-    className: "font-['Courgette']",
+    className: courgette.className,
   },
   {
     name: "Crimson Text",
     text: "AI Art Generator",
-    className: "font-['Crimson_Text']",
+    className: crimsonText.className,
   },
-  { name: "Dosis", text: "AI Art Generator", className: "font-['Dosis']" },
+  { name: "Dosis", text: "AI Art Generator", 
+    className: dosis.className,
+  },
   {
     name: "Great Vibes",
     text: "AI Art Generator",
-    className: "font-['Great_Vibes']",
+    className: greatVibes.className,
   },
   {
     name: "Indie Flower",
     text: "AI Art Generator",
-    className: "font-['Indie_Flower']",
+    className: indieFlower.className,
   },
   {
     name: "Josefin Sans",
     text: "AI Art Generator",
-    className: "font-['Josefin_Sans']",
+    className: josefinSans.className,
   },
-  { name: "Kalam", text: "AI Art Generator", className: "font-['Kalam']" },
-  { name: "Lato", text: "AI Art Generator", className: "font-['Lato']" },
+  { name: "Kalam", text: "AI Art Generator", 
+    className: kalam.className
+  },
+  { name: "Lato", text: "AI Art Generator", 
+    className: lato.className,
+  },
   {
     name: "Libre Baskerville",
     text: "AI Art Generator",
-    className: "font-['Libre_Baskerville']",
+    className: libreBaskerville.className,
   },
-  { name: "Lobster", text: "AI Art Generator", className: "font-['Lobster']" },
+  { name: "Lobster", text: "AI Art Generator", 
+    className: lobster.className,
+  },
   {
     name: "Montserrat",
     text: "AI Art Generator",
-    className: "font-['Montserrat']",
+    className: montserrat.className,
   },
   {
     name: "Open Sans",
     text: "AI Art Generator",
-    className: "font-['Open_Sans']",
+    className: openSans.className,
   },
-  { name: "Oswald", text: "AI Art Generator", className: "font-['Oswald']" },
+  { name: "Oswald", text: "AI Art Generator", 
+    className: oswald.className, 
+  },
   {
     name: "Pacifico",
     text: "AI Art Generator",
-    className: "font-['Pacifico']",
+    className: pacifico.className,
   },
   {
     name: "Playfair Display",
     text: "AI Art Generator",
-    className: "font-['Playfair_Display']",
+    className: playfairDisplay.className,
   },
-  { name: "Poppins", text: "AI Art Generator", className: "font-['Poppins']" },
+  { name: "Poppins", text: "AI Art Generator", 
+    className: poppins.className
+  },
   {
     name: "Quicksand",
     text: "AI Art Generator",
-    className: "font-['Quicksand']",
+    className: quicksand.className
   },
-  { name: "Raleway", text: "AI Art Generator", className: "font-['Raleway']" },
-  { name: "Roboto", text: "AI Art Generator", className: "font-['Roboto']" },
+  { name: "Raleway", text: "AI Art Generator", 
+    className: raleway.className 
+  },
+  { name: "Roboto", text: "AI Art Generator", 
+    className: roboto.className 
+  },
   {
     name: "Roboto Condensed",
     text: "AI Art Generator",
-    className: "font-['Roboto_Condensed']",
+    className: robotoCondensed.className,
   },
   {
     name: "Roboto Mono",
     text: "AI Art Generator",
-    className: "font-['Roboto_Mono']",
+    className: robotoMono.className
   },
   {
     name: "Roboto Slab",
     text: "AI Art Generator",
-    className: "font-['Roboto_Slab']",
+    className: robotoSlab.className
   },
-  { name: "Rubik", text: "AI Art Generator", className: "font-['Rubik']" },
+  { name: "Rubik", text: "AI Art Generator", 
+    className: rubik.className
+  },
   {
     name: "Source Sans Pro",
     text: "AI Art Generator",
-    className: "font-['Source_Sans_Pro']",
+    className: sourceSans3.className
   },
   {
     name: "Source Serif Pro",
     text: "AI Art Generator",
-    className: "font-['Source_Serif_Pro']",
+    className: sourceSerifPro.className
   },
   {
     name: "Space Grotesk",
     text: "AI Art Generator",
-    className: "font-['Space_Grotesk']",
+    className: spaceGrotesk.className
   },
   {
     name: "Space Mono",
     text: "AI Art Generator",
-    className: "font-['Space_Mono']",
+    className: spaceMono.className
   },
-  { name: "Ubuntu", text: "AI Art Generator", className: "font-['Ubuntu']" },
+  { name: "Ubuntu", text: "AI Art Generator", 
+    className: ubuntu.className },
   {
     name: "Work Sans",
     text: "AI Art Generator",
-    className: "font-['Work_Sans']",
+    className: workSans.className
   },
 ];
 

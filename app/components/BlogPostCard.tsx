@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface BlogPost {
   title: string;
@@ -16,8 +17,8 @@ interface BlogPostCardProps {
 export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
     <article className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-      <div className="relative h-48">
-        <img src={post.image} className="object-cover" />
+      <div className="relative h-64">
+        <Image alt={post.title} src={post.image} className="object-cover" fill />
       </div>
       <div className="p-6">
         <div className="flex items-center mb-4">

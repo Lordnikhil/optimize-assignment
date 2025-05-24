@@ -97,16 +97,19 @@ export default function Gallery() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {photos.map((photo) => (
+          {photos.map((photo, index) => (
             <div
               key={photo.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105"
             >
               <div className="relative aspect-square">
-                <img
+                <Image
+                  alt={"gallery-img"+index}
                   src={photo.image}
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  fill
+                  loading={index > 6 ? "lazy" : "eager"}
                 />
               </div>
               <div className="p-6">
